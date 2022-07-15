@@ -2,6 +2,7 @@ package net.gdogjam.tutorialmod.Block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.gdogjam.tutorialmod.Block.custom.JumpyBlock;
 import net.gdogjam.tutorialmod.TutorialMod;
 import net.gdogjam.tutorialmod.item.ModItemGroup;
 import net.minecraft.block.Block;
@@ -17,6 +18,8 @@ import net.minecraft.util.registry.Registry;
 public class ModBlocks {
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
         new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.Tanzanite);
+    public static final Block JUMPY_BLOCK = registerBlock("jumpy_block",
+        new JumpyBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.Tanzanite);
     public static final Block TANZANITE_ORE = registerBlock("tanzanite_ore",
         new OreBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool(),
                 UniformIntProvider.create(3, 7)), ModItemGroup.Tanzanite);
