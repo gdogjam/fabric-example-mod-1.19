@@ -23,7 +23,7 @@ public class ModBlocks {
         new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.Tanzanite);
 
     public static final Block FISH_BLOCK = registerBlock("fish_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).slipperiness(1)), ModItemGroup.Tanzanite);
+            new Block(FabricBlockSettings.of(Material.EGG).strength(2f).slipperiness(1)), ModItemGroup.Tanzanite);
 
     public static final Block JUMPY_BLOCK = registerBlock("jumpy_block",
         new JumpyBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.Tanzanite);
