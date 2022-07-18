@@ -10,8 +10,8 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 public class VillagerGuardRenderer extends GeoEntityRenderer<VillagerGuard> {
 
 
-    public VillagerGuardRenderer(EntityRendererFactory.Context ctx, AnimatedGeoModel<VillagerGuard> modelProvider) {
-        super(ctx, modelProvider);
+    public VillagerGuardRenderer(EntityRendererFactory.Context ctx) {
+        super(ctx, new VillagerGuardModel());
     }
 
     @Override
