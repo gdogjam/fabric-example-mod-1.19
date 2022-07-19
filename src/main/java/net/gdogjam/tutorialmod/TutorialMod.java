@@ -7,6 +7,7 @@ import net.gdogjam.tutorialmod.util.ModRegistries;
 import net.gdogjam.tutorialmod.villager.ModVillagers;
 import net.gdogjam.tutorialmod.world.feature.ModConfiguredFeatures;
 import net.gdogjam.tutorialmod.world.gen.ModOreGeneration;
+import net.gdogjam.tutorialmod.world.structure.ModStructures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,5 +26,7 @@ public class TutorialMod implements ModInitializer {
 		ModVillagers.registerTrades();
 		ModRegistries.registerAttributes();
 		ModOreGeneration.generateOres();
+
+		ModStructures.registerStructureFeatures();
 	}
 }
