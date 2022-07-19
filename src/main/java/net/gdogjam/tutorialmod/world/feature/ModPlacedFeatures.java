@@ -16,6 +16,10 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.TANZANITE_ORE, modifiersWithCount(9,
                     HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
 
+    public static final RegistryEntry<PlacedFeature> FISH_BLOCK_PLACED = PlacedFeatures.register("fish_block_placed",
+            ModConfiguredFeatures.FISH_BLOCK, modifiersWithCount(5,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(70))));
+
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
     }
