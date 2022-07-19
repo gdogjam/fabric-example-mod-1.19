@@ -19,13 +19,12 @@ public class CrownItem extends Item {
     public CrownItem(Settings settings) {
         super(settings);
     }
-
+/**
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient() && hand == Hand.MAIN_HAND){
             //output number
             user.sendMessage(Text.literal("It's good to be King!"));
-            user.
             // add a cooldown
             user.getItemCooldownManager().set(this,20);
         }
@@ -51,4 +50,5 @@ public class CrownItem extends Item {
     private int getRandomNumber(){
         return Random.createLocal().nextInt(10);
     }
+ **/
 }
