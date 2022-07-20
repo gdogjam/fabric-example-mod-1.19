@@ -10,6 +10,7 @@ import net.gdogjam.tutorialmod.world.gen.ModOreGeneration;
 import net.gdogjam.tutorialmod.world.structure.ModStructures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 public class TutorialMod implements ModInitializer {
 
@@ -27,5 +28,7 @@ public class TutorialMod implements ModInitializer {
 		ModRegistries.registerAttributes();
 		ModOreGeneration.generateOres();
 		ModStructures.registerStructureFeatures();
+
+		GeckoLib.initialize();
 	}
 }

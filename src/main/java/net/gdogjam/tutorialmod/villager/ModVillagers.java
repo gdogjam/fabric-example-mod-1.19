@@ -29,7 +29,7 @@ public class ModVillagers {
     public static final PointOfInterestType KING_POI = registerPOI("king_poi", ModBlocks.TANZANITE_BLOCK);
 
     public static final VillagerProfession KING = registerProfession("king",
-            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(TutorialMod.MOD_ID, "king")));
+            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(TutorialMod.MOD_ID, "king_poi")));
 
 
 

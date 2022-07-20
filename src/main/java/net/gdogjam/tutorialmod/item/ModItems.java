@@ -34,7 +34,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.Tanzanite).food(new FoodComponent.Builder().hunger(4).saturationModifier(4f).build())));
 
     public static final Item KING_CROWN = registerItem("crown",
-            new CrownItem(new FabricItemSettings().food(ModFoodComponents.CROWN)));
+            new CrownItem(new FabricItemSettings().food(ModFoodComponents.CROWN).group(ModItemGroup.Tanzanite)));
 
     public static final Item VILLAGER_GUARD_EGG = registerItem("villager_guard_egg",
             new SpawnEggItem(ModEntities.VILLAGERGUARD, 0x048e8d, 0x3b3635, new FabricItemSettings().group(ModItemGroup.Tanzanite).maxCount(1)));
