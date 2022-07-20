@@ -20,8 +20,18 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 public class ModVillagers {
     public static final PointOfInterestType JUMPY_POI = registerPOI("jumpy_poi", ModBlocks.JUMPY_BLOCK);
+
     public static final VillagerProfession JUMP_MASTER = registerProfession("jumpmaster",
             RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(TutorialMod.MOD_ID, "jumpy_poi")));
+
+
+
+    public static final PointOfInterestType KING_POI = registerPOI("king_poi", ModBlocks.TANZANITE_BLOCK);
+
+    public static final VillagerProfession KING = registerProfession("king",
+            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE_KEY, new Identifier(TutorialMod.MOD_ID, "king")));
+
+
 
     public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
         return Registry.register(Registry.VILLAGER_PROFESSION, new Identifier(TutorialMod.MOD_ID, name),
@@ -45,6 +55,14 @@ public class ModVillagers {
                             new ItemStack(Items.EMERALD, 3),
                             new ItemStack(ModItems.EGGPLANT, 5),
                             6, 2, 0.02f
+                    )));
+                });
+        TradeOfferHelper.registerVillagerOffers(KING,1,
+                factories -> {
+                    factories.add(((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 100),
+                            new ItemStack(ModItems.KING_CROWN, 1),
+                            1, 2, 0.02f
                     )));
                 });
     }

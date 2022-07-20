@@ -1,3 +1,21 @@
+package net.gdogjam.tutorialmod.world.structure;
+
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.structure.pool.StructurePool;
+import net.minecraft.structure.pool.StructurePoolBasedGenerator;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.gen.HeightContext;
+import net.minecraft.world.gen.heightprovider.HeightProvider;
+import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.gen.structure.StructureType;
+
+import java.util.Optional;
+
 public class SkyStructures extends Structure {
 
     // A custom codec that changes the size limit for our code_structure_sky_fan.json's config to not be capped at 7.

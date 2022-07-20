@@ -26,6 +26,7 @@ public class TutorialMod implements ModInitializer {
 		ModVillagers.registerTrades();
 		ModRegistries.registerAttributes();
 		ModOreGeneration.generateOres();
+		ModStructures.registerStructureFeatures();
 
 		ModStructures.registerStructureFeatures();
 	}

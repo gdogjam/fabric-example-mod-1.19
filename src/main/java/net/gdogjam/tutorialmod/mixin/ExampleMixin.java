@@ -14,3 +14,4 @@ public class ExampleMixin {
 		TutorialMod.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }
+

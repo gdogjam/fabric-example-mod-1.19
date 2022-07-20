@@ -1,10 +1,20 @@
+package net.gdogjam.tutorialmod.world.structure;
+
+
+import com.mojang.serialization.Codec;
+import net.gdogjam.tutorialmod.TutorialMod;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.gen.structure.StructureType;
+
 public class ModStructures {
     public static StructureType<?> SKY_STRUCTURES;
 
     /**
      * Registers the structure itself and sets what its path is. In this case, the
      * structure will have the Identifier of structure_tutorial:sky_structures.
-     *
+     * <p>
      * It is always a good idea to register your Structures so that other mods and datapacks can
      * use them too directly from the registries. It's great for mod/datapacks compatibility.
      */

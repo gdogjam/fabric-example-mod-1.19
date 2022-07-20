@@ -32,3 +32,4 @@ public class ModConfiguredFeatures {
         TutorialMod.LOGGER.debug("Registering the ModConfiguredFeatures for " + TutorialMod.MOD_ID);
     }
 }
+

@@ -1,13 +1,19 @@
 package net.gdogjam.tutorialmod.entity.custom;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
@@ -38,17 +44,40 @@ public class VillagerGuard extends IronGolemEntity implements IAnimatable {
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.villager_guard.idle", true));
         return PlayState.CONTINUE;
     }
+
     @Override
-    public void registerControllers(AnimationData animationData) {
-
-
+    protected void initGoals() {
+        super.initGoals();
     }
 
-
+    @Override
+    public void registerControllers(AnimationData animationData) {
+        animationData.addAnimationController(new AnimationController(this, "controller",
+                0, this::predicate));
+    }
 
     @Override
     public AnimationFactory getFactory() {
         return factory;
     }
-    //can put custom sounds here its 4 methods
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_DOLPHIN_AMBIENT;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundEvents.ENTITY_DOLPHIN_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_PIG_DEATH;
+    }
+
+    @Override
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(SoundEvents.ENTITY_PIG_STEP, 0.15f, 1.0f);
+    }
 }
