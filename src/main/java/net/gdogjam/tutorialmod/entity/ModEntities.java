@@ -15,5 +15,5 @@ public class ModEntities {
     public static final EntityType<VillagerGuard> VILLAGERGUARD = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(TutorialMod.MOD_ID, "villagerguard"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, VillagerGuard::new)
-                    .dimensions(EntityDimensions.fixed(0.5f, 1.0f)).build());
+                    .dimensions(EntityDimensions.fixed(0.5f, 2.3f)).build());
 }
