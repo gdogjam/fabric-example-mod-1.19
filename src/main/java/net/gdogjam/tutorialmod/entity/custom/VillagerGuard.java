@@ -34,6 +34,10 @@ public class VillagerGuard extends IronGolemEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4f);
     }
 
+    @Override
+    protected void dropLoot(DamageSource source, boolean causedByPlayer) {
+        super.dropLoot(source, causedByPlayer);
+    }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event .isMoving()) {
