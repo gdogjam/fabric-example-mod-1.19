@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "broken=true": { "model":  "tutorialmod:block/reinforced_wood_block" },
+    "broken=false": { "model":  "tutorialmod:block/weakened_reinforced_wood_block" }
+  }
+}

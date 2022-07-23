@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.gdogjam.tutorialmod.Block.custom.EggPlantCropBlock;
 import net.gdogjam.tutorialmod.Block.custom.JumpyBlock;
+import net.gdogjam.tutorialmod.Block.custom.ReinforcedWoodBlock;
 import net.gdogjam.tutorialmod.Block.custom.TanzaniteLamp;
 import net.gdogjam.tutorialmod.TutorialMod;
 import net.gdogjam.tutorialmod.item.ModItemGroup;
@@ -34,6 +35,9 @@ public class ModBlocks {
     public static final Block TANZANITE_LAMP = registerBlock("tanzanite_lamp",
         new TanzaniteLamp(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()
                 .luminance(state -> state.get(TanzaniteLamp.LIT) ? 15 : 0)), ModItemGroup.Tanzanite);
+
+    public static final Block REINFORCED_WOOD_BLOCK = registerBlock("reinforced_wood_block",
+            new ReinforcedWoodBlock(FabricBlockSettings.of(Material.WOOD).strength(3f).requiresTool()), ModItemGroup.Tanzanite);
 
     public static final Block TANZANITE_ORE = registerBlock("tanzanite_ore",
         new OreBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool(),
