@@ -32,21 +32,20 @@ public class ReinforcedWoodBlock extends Block {
         super(settings);
     }
 
-
-    @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient()){
-            if (world.getBlockState(pos).get(BROKEN))
-            world.setBlockState(pos, (BlockState)state.with(BROKEN, false), Block.NOTIFY_ALL);
-        } else {
-            super.onBreak(world, pos, state, player);
-        }
-    }
-
     @Override
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack stack) {
         super.afterBreak(world, player, pos, state, blockEntity, stack);
     }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        super.onBreak(world, pos, state, player);
+    }
+
+    public void makeWeak(World world, PlayerEntity player, BlockPos pos, BlockState state){
+
+    }
+
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
