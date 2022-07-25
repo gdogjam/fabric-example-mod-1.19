@@ -1,7 +1,10 @@
 package net.gdogjam.tutorialmod.Block.custom;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.gdogjam.tutorialmod.Block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -31,21 +34,6 @@ public class ReinforcedWoodBlock extends Block {
     public ReinforcedWoodBlock(Settings settings) {
         super(settings);
     }
-
-    @Override
-    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack stack) {
-        super.afterBreak(world, player, pos, state, blockEntity, stack);
-    }
-
-    @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        super.onBreak(world, pos, state, player);
-    }
-
-    public void makeWeak(World world, PlayerEntity player, BlockPos pos, BlockState state){
-
-    }
-
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
